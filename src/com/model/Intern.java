@@ -46,11 +46,11 @@ public class Intern extends Candidate {
 	public void inputIntern(){
 		Scanner sc = new Scanner(System.in);
 		super.inputCandidate();
-		System.out.println("Input majors: ");
+		System.out.print("Input majors: ");
 		majors =sc.nextLine();
-		System.out.println("Input semester: ");
+		System.out.print("Input semester: ");
 		semester =sc.nextLine();
-		System.out.println("Input universityName: ");
+		System.out.print("Input universityName: ");
 		universityName =sc.nextLine();
 	}
 	/**

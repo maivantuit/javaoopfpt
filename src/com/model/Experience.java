@@ -23,9 +23,9 @@ public class Experience extends Candidate{
 	public void inputExperience(){		
 		Scanner sc = new Scanner(System.in);
 		super.inputCandidate();
-		System.out.println("Input expInYear: ");
+		System.out.print("Input expInYear: ");
 		expInYear = sc.nextInt();		
-		System.out.println("Input proSkill: ");
+		System.out.print("Input proSkill: ");
 		proSkill = sc.nextLine();
 		proSkill = sc.nextLine();
 	}

@@ -12,7 +12,7 @@ import java.util.Scanner;
 	private String phone;
 	private String email;
 	private int candidate_type;
-	private int candidate_count;
+	public static int candidate_count;
 	private ArrayList<Certificate> listCertificate;
 	
 	public Candidate(){
