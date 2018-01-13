@@ -59,32 +59,59 @@ public class ManagementCadidate {
 				array = new int[n];
 				for (int i = 0; i < array.length; i++) {
 					Experience e1 = new Experience();
-					e1.inputExperience();	
+					e1.inputExperience();
 					listCandidate2.add(e1);
 				}
-				System.out.println("Array after input: ");
+				//System.out.println("Array after input: ");
 				/*
 				for (int i = 0; i < listCandidate2.size(); i++) {
 					if(listCandidate2.get(i) instanceof Experience){
 						listCandidate2.get(i).showInFo();
 					}					
 				}
-				*/
+				*/				
+				break;
+			case 2:
+				System.out.print("You wanna input how fresher: ");
+				n =sc.nextInt();
+				array = new int[n];
+				for (int i = 0; i < array.length; i++) {
+					Fresher f1 = new Fresher();
+					f1.inputFresher();
+					listCandidate2.add(f1);
+				}
+				break;
+			case 3:
+				System.out.print("You wanna input how intern: ");
+				n =sc.nextInt();
+				array = new int[n];
+				for (int i = 0; i < array.length; i++) {
+					Intern i1 = new Intern();
+					i1.inputIntern();
+					listCandidate2.add(i1);
+				}
+				break;
+			case 4:				
 				for(Candidate ele : listCandidate2){
 					if(ele instanceof Experience){
 						((Experience) ele).showMe();
 					}
+				}				
+				for(Candidate ele : listCandidate2){
+					if(ele instanceof Fresher){
+						((Fresher) ele).showMe();
+					}
+				}				
+				for(Candidate ele : listCandidate2){
+					if(ele instanceof Intern){
+						((Intern) ele).showMe();
+					}
 				}
 				break;
-			case 2:
+			case 5:
+				System.exit(0);
+				break;
 				
-				break;
-			case 3:
-	
-				break;
-			case 4:
-				
-				break;
 			}
 		}while(choice !=5);
 		

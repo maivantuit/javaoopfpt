@@ -26,7 +26,7 @@ public class Experience extends Candidate{
 		System.out.println("Input expInYear: ");
 		expInYear = sc.nextInt();		
 		System.out.println("Input proSkill: ");
-		
+		proSkill = sc.nextLine();
 		proSkill = sc.nextLine();
 	}
 	

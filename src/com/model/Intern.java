@@ -1,6 +1,7 @@
 package com.model;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class Intern extends Candidate {
 	private String majors;
@@ -42,7 +43,19 @@ public class Intern extends Candidate {
 		this.semester = semester;
 		this.universityName = universityName;
 	}
-	
+	public void inputIntern(){
+		Scanner sc = new Scanner(System.in);
+		super.inputCandidate();
+		System.out.println("Input majors: ");
+		majors =sc.nextLine();
+		System.out.println("Input semester: ");
+		semester =sc.nextLine();
+		System.out.println("Input universityName: ");
+		universityName =sc.nextLine();
+	}
+	/**
+	 * 
+	 */
 	public void showMe(){
 		super.showInFo();
 		System.out.printf("%-15s %-15s %-15s \n",majors,semester,universityName);

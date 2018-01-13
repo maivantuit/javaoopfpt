@@ -1,6 +1,7 @@
 package com.model;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class Fresher extends Candidate{
 	private String graduationDate;
@@ -46,6 +47,19 @@ public class Fresher extends Candidate{
 		this.education = education;
 	}
 
+	public void inputFresher(){
+		Scanner sc = new Scanner(System.in);
+		super.inputCandidate();
+		System.out.print("Input graduationDate: ");
+		graduationDate = sc.nextLine();
+		System.out.print("Input graduationRank: ");
+		graduationRank = sc.nextLine();
+		System.out.print("Input education: ");
+		education = sc.nextLine();
+	}
+	/**
+	 * 
+	 */
 	public void showMe(){
 		super.showInFo();
 		System.out.printf("%-15s %-15s %-15s \n",graduationDate,graduationRank,education);
