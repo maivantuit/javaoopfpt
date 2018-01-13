@@ -1,6 +1,7 @@
 package com.model;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class Experience extends Candidate{
 	private int expInYear;
@@ -19,9 +20,22 @@ public class Experience extends Candidate{
 		this.proSkill = proSkill;
 	}
 	
+	public void inputExperience(){		
+		Scanner sc = new Scanner(System.in);
+		super.inputCandidate();
+		System.out.println("Input expInYear: ");
+		expInYear = sc.nextInt();		
+		System.out.println("Input proSkill: ");
+		
+		proSkill = sc.nextLine();
+	}
+	
+	/**
+	 * 
+	 */
 	public void showMe(){
 		super.showInFo();
-		System.out.printf("%-5s %-15s \n",expInYear,proSkill);
+		System.out.printf("%-15s %-15s \n",expInYear,proSkill);
 	}
 	
 	

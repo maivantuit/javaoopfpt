@@ -42,6 +42,11 @@ public class Intern extends Candidate {
 		this.semester = semester;
 		this.universityName = universityName;
 	}
+	
+	public void showMe(){
+		super.showInFo();
+		System.out.printf("%-15s %-15s %-15s \n",majors,semester,universityName);
+	}
 
 	/**
 	 * @return the majors

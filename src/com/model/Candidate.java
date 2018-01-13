@@ -3,6 +3,7 @@ package com.model;
 import java.security.cert.Certificate;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
  public abstract class Candidate {
 	private String candidateID;
@@ -24,11 +25,28 @@ import java.util.Date;
 	public void addCertificate(Certificate ce){
 		listCertificate.add(ce);
 	}
+	
+	public void inputCandidate(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input candidateID");
+		candidateID = sc.nextLine();
+		System.out.println("Input fullName");
+		fullName = sc.nextLine();
+		System.out.println("Input birthDay");
+		birthDay = sc.nextLine();
+		System.out.println("Input phone");
+		phone = sc.nextLine();
+		System.out.println("Input email");
+		email = sc.nextLine();
+		System.out.println("Input candidate_type");
+		candidate_type = sc.nextInt();
+	}
+	
 	/**
 	 * 
 	 */
 	public void showInFo(){
-		System.out.printf("%-10s %-15s %-10s %-15s %-15s %-5s",candidateID,fullName,birthDay,phone,email,candidate_type);
+		System.out.printf("%-10s %-15s %-10s %-15s %-15s %-15s",candidateID,fullName,birthDay,phone,email,candidate_type);
 	}
 	
 	/**

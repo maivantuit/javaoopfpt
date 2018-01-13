@@ -46,7 +46,11 @@ public class Fresher extends Candidate{
 		this.education = education;
 	}
 
-
+	public void showMe(){
+		super.showInFo();
+		System.out.printf("%-15s %-15s %-15s \n",graduationDate,graduationRank,education);
+	}
+	
 	/**
 	 * @return the graduationDate
 	 */
