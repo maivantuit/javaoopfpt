@@ -1,14 +1,28 @@
-package com.model;
+package model;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Date;
 import java.util.Scanner;
+
+import connection.DBConnect;
 
 public class Experience extends Candidate{
 	private int expInYear;
 	private String proSkill;
 	
+	public Experience(String candidateID){
+		Connection con = DBConnect.getConnection();
+		try {
+			Statement stmt = con.createStatement();
+			String sql =  "select CandidateID from Experience where CandidateID = "+candidateID;
+			ResultSet rs = stmt.executeQuery(sql);			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+	}
 	public Experience(){}
-	
 	
 	/**
 	 * @param expInYear
@@ -96,5 +110,8 @@ public class Experience extends Candidate{
 	
 	
 	
-	
+	public static void main(String[] args) {
+		Experience e = new Experience("Can1");
+		e.showMe();
+	}
 }

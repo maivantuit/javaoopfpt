@@ -1,9 +1,14 @@
-package com.model;
+package model;
 
 import java.security.cert.Certificate;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
+
+import connection.DBConnect;
 
  public abstract class Candidate {
 	private String candidateID;
@@ -18,6 +23,7 @@ import java.util.Scanner;
 	public Candidate(){
 		candidate_count++;
 	}
+	
 	/**
 	 * 
 	 * @param ce
@@ -201,8 +207,6 @@ import java.util.Scanner;
 	}
 	
 	
-	
-	
-	
+
 	
 }

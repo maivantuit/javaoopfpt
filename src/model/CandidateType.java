@@ -1,4 +1,4 @@
-package com.model;
+package model;
 
 public interface CandidateType {
 	public static final int Experience = 0;
